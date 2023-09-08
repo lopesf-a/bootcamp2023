@@ -49,10 +49,6 @@ function App() {
            title="Mon App test"
            subtitle="coucou"
            />
-
-           <Button
-              identification = 'Salut'
-           />
         </p>
         <p>{count}</p>
         <p>
@@ -60,7 +56,12 @@ function App() {
             isAuth ? 
             (<div> 
               <p> Vous êtes connecté ! </p>
-              <button onClick={() => authenticateUser()}>Se Deconnecter </button>
+              {/* <button onClick={() => authenticateUser()}>Se Deconnecter </button> */}
+              <Button
+                handleClick={() => authenticateUser()}
+                title= 'Se Deconnecter'
+                color='black'
+              />
               {/* les States! */}
              </div>)
             : (<div> 

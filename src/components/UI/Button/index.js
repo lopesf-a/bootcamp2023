@@ -1,13 +1,8 @@
 import React from 'react';
-import './style.css';
 
-const Index = ( {identification}) => {
+const Index = ( {title, color, handleClick }) => {
     return (
-        <div>
-            <div className='btn btn__green'> 
-                <button> {identification} </button>
-            </div>
-        </div>
+                <button className={color} onClick={handleClick}> {title} </button>        
     );
 }
 

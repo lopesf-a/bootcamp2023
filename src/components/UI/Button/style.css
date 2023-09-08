@@ -1,16 +1,9 @@
-.btn
-{
-    
-    padding: 15px 32px;
-    
+.black{
+    background-color: black;
+    color:white
 }
-.btn__green
+.white
 {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    background-color: white;
+    color: black;
 }
