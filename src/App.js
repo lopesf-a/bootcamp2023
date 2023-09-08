@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useState} from 'react';
+import TitlePage from './components/UI/TitlePage/index';
+import Button from './components/UI/Button/index';
 
 function App() {
   const [user, setUser] = useState({
     firstName: "Franck",
-    lastName: "Castle",
+    lastName: "Castle", 
     isAuth: false
   })
 
@@ -41,7 +43,17 @@ function App() {
         <p>
           Bonjour {user.firstName} {user.lastName}
         </p>
-        <p><button onClick={() => incrementCount()}>Ad 1</button></p>
+        <p>
+          <button onClick={() => incrementCount()}>Ad 1</button>
+          <TitlePage
+           title="Mon App test"
+           subtitle="coucou"
+           />
+
+           <Button
+              identification = 'Salut'
+           />
+        </p>
         <p>{count}</p>
         <p>
           {
