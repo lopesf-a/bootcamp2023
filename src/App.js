@@ -1,20 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-const user = {
-  firstName: 'Franck',
-  lastName:  'Lopes',
-  isAuth : true
-}
-const { firstName, lastName, isAuth } = user;
-const authenticateUser = () => {
-  user.isAuth = false;
-}
+import React, {useState} from 'react';
+
 function App() {
+  const [user, setUser] = useState({
+    firstName: "Franck",
+    lastName: "Castle",
+    isAuth: false
+  })
+
+  const [count, setCount] = useState(0);
+
+  const { firstName, lastName, isAuth } = user;
+
+  const authenticateUser = () => {
+    setUser({
+      ...user,
+      isAuth: true
+    });
+  }
+
+  const incrementCount = () => {
+    setCount(count=>count+1);
+  }
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
+         <img src={logo} className="App-logo" alt="logo" />
+        {/*<p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -28,17 +41,19 @@ function App() {
         <p>
           Bonjour {user.firstName} {user.lastName}
         </p>
+        <p><button onClick={() => incrementCount()}>Ad 1</button></p>
+        <p>{count}</p>
         <p>
           {
             isAuth ? 
             (<div> 
               <p> Vous êtes connecté ! </p>
-              <button onClick={()=>authenticateUser()}> Se Deconnecter </button>
+              <button onClick={() => authenticateUser()}>Se Deconnecter </button>
               {/* les States! */}
              </div>)
             : (<div> 
               <p> Vous n'êtes pas connecté ! </p>
-              <button onClick={()=>console.log('coucou')}> Connexion </button>
+              <button onClick={() => authenticateUser()}>Connexion</button>
              </div>)
           }
         </p>
