@@ -1,34 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import TitlePage from './components/UI/TitlePage/index';
 import Button from './components/UI/Button/index';
+import Header from './components/Header/index';
+import Product from './components/Product__Grid/Index';
+
 
 function App() {
+ 
   const [user, setUser] = useState({
     firstName: "Franck",
     lastName: "Castle", 
     isAuth: false
   })
 
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
-  const { firstName, lastName, isAuth } = user;
+  // const { firstName, lastName, isAuth } = user;
 
-  const authenticateUser = () => {
-    setUser({
-      ...user,
-      isAuth: true
-    });
-  }
+  // const authenticateUser = () => {
+  //   setUser({
+  //     ...user,
+  //     isAuth: true
+  //   });
+  // }
 
-  const incrementCount = () => {
-    setCount(count=>count+1);
-  }
+  // const incrementCount = () => {
+  //   setCount(count=>count+1);
+  // }
   return (
     <div className="App">
+      
       <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" />
+         <Header/>
+         <Product/>
+         
         {/*<p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -40,7 +48,7 @@ function App() {
         >
           Learn React
         </a> */}
-        <p>
+        {/* <p>
           Bonjour {user.firstName} {user.lastName}
         </p>
         <p>
@@ -57,19 +65,19 @@ function App() {
             (<div> 
               <p> Vous êtes connecté ! </p>
               {/* <button onClick={() => authenticateUser()}>Se Deconnecter </button> */}
-              <Button
+              {/* <Button
                 handleClick={() => authenticateUser()}
                 title= 'Se Deconnecter'
                 color='black'
-              />
+              /> */} 
               {/* les States! */}
-             </div>)
+             {/* </div>)
             : (<div> 
               <p> Vous n'êtes pas connecté ! </p>
               <button onClick={() => authenticateUser()}>Connexion</button>
              </div>)
           }
-        </p>
+        </p> */}
       </header>
     </div>
   );

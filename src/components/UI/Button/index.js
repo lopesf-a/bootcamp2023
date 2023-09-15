@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Index = ( {title, color, handleClick }) => {
+const Index = ( {title, color, handleClick , type}) => {
     return (
-                <button className={color} onClick={handleClick}> {title} </button>        
+                <button type={type}className={color} onClick={handleClick}> {title} </button> 
+                       
     );
 }
 

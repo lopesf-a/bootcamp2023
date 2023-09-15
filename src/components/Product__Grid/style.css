@@ -1,0 +1,20 @@
+.product__card{
+    background-color: blue;
+    display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal; 
+}
+.product__card .item__title{
+    color: darkslategrey;
+}
+.product__card .item__price{
+    color: black;
+}
+.product__card .item__thumbnail
+{
+    width: auto;
+    height: 200px;
+}

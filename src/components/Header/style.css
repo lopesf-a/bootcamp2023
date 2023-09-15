@@ -1,0 +1,29 @@
+.header__main{
+    padding:15px;
+    display: flex;
+}
+
+.header__list
+{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+}
+
+.header__list .item__nav{
+    list-style: none;
+    margin: 0px 15px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+.item__nav .item__link{
+    color: white;
+    text-decoration: none;
+}
